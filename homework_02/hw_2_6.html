@@ -1,0 +1,53 @@
+<meta charset="utf-8">
+<script>
+
+// Реализовать функцию с тремя параметрами: function mathOperation(arg1, arg2, operation), где arg1, arg2 — значения аргументов, operation — строка с названием операции. 
+// В зависимости от переданного значения выполнить одну из арифметических операций (использовать функции из пункта 5) и вернуть полученное значение (применить switch).
+
+
+function summary(num1, num2)
+{
+	return num1 + num2;
+}
+
+
+function minus(num1, num2)
+{
+	return num1 - num2;
+}
+
+
+function div(num1, num2)
+{
+	return num1 / num2;
+}
+
+
+function mult(num1, num2)
+{
+	return num1 * num2;
+}
+
+
+function mathOperation(arg1, arg2, operation) {
+	switch (operation) {
+		case 'addition':
+			return summary(arg1, arg2);
+		case 'subtraction':
+			return minus(arg1, arg2);
+		case 'multiplication':
+			return mult(arg1, arg2);
+		case 'division':
+			return div(arg1, arg2)
+	}
+}
+
+var number1 = +prompt('Введите число 1: ');
+var number2 = +prompt('Введите число 2: ');
+
+alert(`Сумма чисел ${number1} и ${number2} = ${mathOperation(number1, number2, 'addition')}`);
+alert(`Разность чисел ${number1} и ${number2} = ${mathOperation(number1, number2, 'subtraction')}`);
+alert(`Частное чисел ${number1} и ${number2} = ${mathOperation(number1, number2, 'division')}`);
+alert(`Произведение чисел ${number1} и ${number2} = ${mathOperation(number1, number2, 'multiplication')}`);
+
+</script>
