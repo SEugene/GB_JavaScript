@@ -1,0 +1,108 @@
+<!--
+1. Создать функцию, генерирующую шахматную доску. Можно использовать любые html-теги. Доска должна быть верно разлинована на черные и белые ячейки. Строки должны нумероваться числами от 1 до 8, столбцы — латинскими буквами A, B, C, D, E, F, G, H.-->
+
+
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<title>Homework5_1</title>
+		<link href="css/style.css" rel="stylesheet">
+	</head>
+
+	<body>
+		<h1 align="center" style="color: Blue">CHESS</h1>
+	<div class="container" id="cont">
+		<script>
+			var container = document.querySelector(".container");
+			container.style.background = "SpringGreen";
+			container.style.width = "770px";
+			container.style.height = "770px";
+			container.style.paddingLeft = "70px";
+			container.style.paddingBottom = "70px";
+			container.style.margin = "0 auto";
+			container.style.display = "flex";
+			container.style.flexWrap = "wrap";
+				
+			
+			function my_initiation () {
+				var cell = document.createElement ("div");
+				cell.className="cell";
+				cont.append(cell);
+				cell.style.width = "70px";
+				cell.style.height = "70px";
+				cell.style.margin = "0px";
+				cell.style.padding = "0px";
+				cell.style.fontSize = "60px";
+				cell.style.fontWeight = "bold";
+				cell.style.textAlign = "center";				
+			};
+
+
+			window.onload = my_initiation;
+			
+			for ( var iter = 0; ( iter != 121 ); iter++) {
+				window.onload = my_initiation ();
+			};
+			
+			var chessCell = document.querySelectorAll (".cell");
+			for ( var iter2 = 0; ( iter2 < chessCell.length ); iter2++ ) {
+				var cellColour;
+				if ( iter2 % 2 == 0 )	{
+					cellColour = "DarkSlateGray";
+				} else {
+					cellColour = "Wheat";
+					};
+				chessCell[iter2].style.background = cellColour;
+			
+				if ( (iter2 > 33) && (iter2 < 42) ) {
+					chessCell[iter2].innerText = "П";
+				};
+				if ( (iter2 > 88) && (iter2 < 97) ) {
+					chessCell[iter2].style.color = "Ivory";
+					chessCell[iter2].innerText = "П"
+				}
+			};
+
+			var figures = ["Л", "К", "С", "Ф", "К", "С", "К", "Л"]
+			for ( count1 = 23; ( count1 < 31 ); count1++ ) {
+				chessCell[count1].innerText = figures [count1-23];
+				chessCell[count1+77].style.color = "Ivory";
+				chessCell[count1+77].innerText = figures [count1-23]
+			};
+
+			for ( var iter4 = 0; ( iter4 < 22 ); iter4++ ) {
+				chessCell[iter4].style.background = "SpringGreen";
+			};
+			
+			for ( var iter5 = 110; ( iter5 < 121 ); iter5++ ) {
+				chessCell[iter5].style.background = "SpringGreen";
+			};
+								
+			for ( iter6 = 22; ( iter6 < 100 ); iter6 += 11 ) {
+				chessCell[iter6].style.background = "SpringGreen";
+				chessCell[iter6].style.color = "Blue";
+				chessCell[iter6].innerText = iter6 / 11 - 1
+			}
+
+			for ( iter7 = 31; ( iter7 < 110); iter7 += 11 ) {
+				chessCell[iter7].style.background = "SpringGreen";
+				chessCell[iter7].style.color = "Blue"
+			}
+			for ( iter8 = 32; ( iter8 < 110); iter8 += 11 ) {
+				chessCell[iter8].style.background = "SpringGreen";
+				chessCell[iter8-1].innerText = iter8 % 10 - 1
+			}
+
+			var alfabet = ["A", "B", "C", "D", "E", "F", "G", "H"]
+			for ( iter9 = 0; ( iter9 < 8 ); iter9 ++) {
+				chessCell[iter9+12].style.color = "Blue";
+				chessCell[iter9+12].innerText = alfabet[iter9];
+				chessCell[iter9+111].style.color = "Blue";
+				chessCell[iter9+111].innerText = alfabet[iter9]			
+			};
+						
+		</script>
+		</div>
+	</body>
+</html>
