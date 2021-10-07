@@ -1,0 +1,169 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+#wrapper{
+	width: 1300px;
+	
+}
+.heading{
+	color: darkblue;
+	background-color: darkgray;
+	text-align: center;
+	width: 540px;
+}
+
+.left_block{
+	float: left;
+	width: 500px;
+	align-items: center;
+}
+.right_block{
+	float: right;
+	width: 700px;
+	align-items: center;
+	
+}
+
+#catalog{
+	display: flex;
+	min-height: 100px;
+	width: 100%;
+	padding: 20px;
+	/*border: 1px dotted rgb(0, 0, 0);*/
+	flex-direction: column;
+	margin-bottom: 100px;
+}
+
+.price{
+	color: blue;
+	font-size: 120%;
+
+}
+
+.prod_item{
+	display: flex;
+	width: 100%;
+	margin: 10px 0;
+	border: 1px dotted rgb(0, 0, 0);
+	justify-content: space-between;
+}
+
+.description{
+	height: 100%;
+	margin-left: 30px;
+}
+
+.sale{
+	display: flex;
+	width: 200px;
+	flex-direction: column;
+	align-items: flex-end;
+    justify-content: inherit;
+	margin: 10px;
+}
+
+.button{
+	display: block;
+	width: 100%;
+	background: lightblue;
+	padding: 10px;
+	text-align: center;
+	font-size: larger;
+	cursor: pointer;
+}
+
+.button:hover{
+	background: rgb(0, 0, 128);
+	color: rgb(255, 255, 0);
+}
+
+footer{
+	display: flex;
+	color: gold;
+	background: rgb(25, 25, 112);
+	position: fixed;
+	bottom: 0px;
+	height: 40px;
+	width: 100%;
+	margin-top: 30px;
+	padding: 20px;
+}
+
+.total{
+	display: flex;
+	width: 540px;
+	font-size: x-large;
+	justify-content: space-between;
+	align-items: center;
+	
+}
+
+.buy{
+	color: red;
+	display: block;
+	padding: 3px 10px;
+	border: 2px solid red;
+	width: 600;
+	text-decoration: none;
+}
+
+#buy_hidden{
+	display: flex;
+	flex-direction: column;
+    align-items: end;
+    width: 800px;
+	font-size: 1.5em;
+}
+.buy_hidden__delete{
+	color: red;
+	margin-left: 25px;
+	font-size: .8em;	
+}
+
+.del_button{
+	background-color:seashell;
+}
+
+.buy_hidden__delete:hover{
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+.delivery, .messageHtml{
+	display: none;
+    flex-direction: column;
+    align-items: end;
+    width: 800px;
+    font-size: 1.5em;
+}
+.form{
+	width: 100%;
+}
+.buy_hidden__confirm{
+	width: 540px;
+    border-radius: 15px;
+    border: 1px solid lightslategray;
+    padding: 15px;
+    box-sizing: border-box;
+    margin: 10px 0px;
+}
+
+.buy_hidden__head{
+	width: 540px;
+    border-radius: 15px;
+    border: 1px solid white;
+    padding: 15px;
+    box-sizing: border-box;
+    margin: 10px 0px;
+}
+
+.buy_hidden__item{
+	width: 540px;
+    border-radius: 15px;
+    border: 1px solid lightslategray;
+    padding: 15px;
+    box-sizing: border-box;
+    margin: 10px 0px;
+}
