@@ -4,8 +4,26 @@
 }
 
 #wrapper{
-	width: 800px;
+	width: 1300px;
+	
+}
+.heading{
+	color: darkblue;
+	background-color: darkgray;
+	text-align: center;
+	width: 540px;
+}
+
+.left_block{
+	float: left;
+	width: 500px;
 	align-items: center;
+}
+.right_block{
+	float: right;
+	width: 700px;
+	align-items: center;
+	
 }
 
 #catalog{
@@ -13,7 +31,7 @@
 	min-height: 100px;
 	width: 100%;
 	padding: 20px;
-	border: 1px dotted rgb(0, 0, 0);
+	/*border: 1px dotted rgb(0, 0, 0);*/
 	flex-direction: column;
 	margin-bottom: 100px;
 }
@@ -71,16 +89,15 @@ footer{
 	width: 100%;
 	margin-top: 30px;
 	padding: 20px;
-	align-items: center;
-	justify-content: center;
 }
 
 .total{
 	display: flex;
-	width: 800px;
-	font-size: 2em;
+	width: 540px;
+	font-size: x-large;
 	justify-content: space-between;
 	align-items: center;
+	
 }
 
 .buy{
@@ -88,5 +105,65 @@ footer{
 	display: block;
 	padding: 3px 10px;
 	border: 2px solid red;
+	width: 600;
 	text-decoration: none;
+}
+
+#buy_hidden{
+	display: flex;
+	flex-direction: column;
+    align-items: end;
+    width: 800px;
+	font-size: 1.5em;
+}
+.buy_hidden__delete{
+	color: red;
+	margin-left: 25px;
+	font-size: .8em;	
+}
+
+.del_button{
+	background-color:seashell;
+}
+
+.buy_hidden__delete:hover{
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+.delivery, .messageHtml{
+	display: none;
+    flex-direction: column;
+    align-items: end;
+    width: 800px;
+    font-size: 1.5em;
+}
+.form{
+	width: 100%;
+}
+.buy_hidden__confirm{
+	width: 540px;
+    border-radius: 15px;
+    border: 1px solid lightslategray;
+    padding: 15px;
+    box-sizing: border-box;
+    margin: 10px 0px;
+}
+
+.buy_hidden__head{
+	width: 540px;
+    border-radius: 15px;
+    border: 1px solid white;
+    padding: 15px;
+    box-sizing: border-box;
+    margin: 10px 0px;
+}
+
+.buy_hidden__item{
+	width: 540px;
+    border-radius: 15px;
+    border: 1px solid lightslategray;
+    padding: 15px;
+    box-sizing: border-box;
+    margin: 10px 0px;
 }
